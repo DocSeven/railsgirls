@@ -1,0 +1,18 @@
+fac(n) = (n==0) ? 1 : n * fac(n-1)
+set xrange [1:15]
+set yrange [1:1e+10]
+set log y
+set sample 15
+plot fac(x) with points
+
+
+bin(x,y) = (fac(x))/(fac(y)*fac(x-y)) with points
+
+
+set parametric
+set trange [0:1]
+x1(t)=-10+10*t
+x2(t)=-10+20*t
+
+plot x1(t), f1(x1(t)) title "f1(x)", \
+x2(t), f2(x2(t)) title "f2(x)"

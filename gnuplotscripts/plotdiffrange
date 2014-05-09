@@ -1,0 +1,11 @@
+fac(n) = (n==0) ? 1 : n * fac(n-1)
+
+set parametric
+set trange [0:1]
+x1(t)=5+5*t
+x2(t)=10*t
+f1(x) = x+x
+f2(x) = x*x
+
+plot x1(t), fac(x1(t)) title "f1(x)" with points, \
+x2(t), fac(x2(t)) title "f2(x) with points"
